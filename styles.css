@@ -1,0 +1,136 @@
+/* Variables inspiradas en Notion */
+:root {
+    --bg: #ffffff;
+    --sidebar-bg: #f7f7f5;
+    --accent: #37352f;
+    --blue: #2383e2;
+    --border: #e9e9e7;
+    --text-main: #37352f;
+    --text-sub: #7a7a78;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: var(--bg);
+    color: var(--text-main);
+    height: 100vh;
+}
+
+/* Sidebar - El Mapa */
+.sidebar {
+    width: 240px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: block;
+    transition: background 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: #ebebe9;
+}
+
+/* Grid Bento */
+.bento-grid {
+    flex: 1;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-sub);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* El Pulso - Gráfico Circular */
+.welcome { grid-column: span 2; background-color: #fbfbfa; }
+.circle-container { display: flex; flex-direction: column; align-items: center; }
+
+.pulso {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    background: conic-gradient(var(--blue) calc(var(--p) * 1%), var(--border) 0);
+    position: relative;
+}
+
+.pulso::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.pulso span { position: relative; font-size: 1.4rem; font-weight: 700; }
+
+/* La Racha - Barras Semanales */
+.bar-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 120px;
+}
+
+.bar {
+    flex: 1;
+    background: var(--accent);
+    border-radius: 3px;
+    min-height: 5px;
+}
+
+/* Los Tramos - Cursos Activos */
+.tramos { grid-column: span 2; }
+.curso { margin-bottom: 20px; }
+.curso-info { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.9rem; }
+
+.linea-progreso {
+    width: 100%;
+    height: 6px;
+    background: var(--border);
+    border-radius: 10px;
+}
+
+.linea-progreso .fill {
+    height: 100%;
+    background: var(--blue);
+}

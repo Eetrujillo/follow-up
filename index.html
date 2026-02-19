@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vía - Dashboard de Aprendizaje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo"><span>⬢</span> Vía</div>
+        <nav>
+            <a href="#" class="active">Panel Principal</a>
+            <a href="#">Mi Biblioteca</a>
+            <a href="#">Calendario</a>
+            <a href="#">Ajustes</a>
+        </nav>
+    </aside>
+
+    <main class="bento-grid">
+        <section class="card welcome">
+            <h1>Hola, explorador.</h1>
+            <p>Has mantenido tu enfoque por 5 días seguidos. Vas por buen camino.</p>
+        </section>
+
+        <section class="card circle-container">
+            <h2 class="title">Meta Diaria</h2>
+            <div class="pulso" style="--p: 75;">
+                <span>75%</span>
+            </div>
+        </section>
+
+        <section class="card racha">
+            <h2 class="title">Actividad Semanal</h2>
+            <div class="bar-group">
+                <div class="bar" style="height: 40%;"></div>
+                <div class="bar" style="height: 80%;"></div>
+                <div class="bar" style="height: 60%;"></div>
+                <div class="bar" style="height: 95%;"></div>
+                <div class="bar" style="height: 50%;"></div>
+            </div>
+        </section>
+
+        <section class="card tramos">
+            <h2 class="title">Tramos Actuales</h2>
+            <div class="curso">
+                <div class="curso-info"><span>Fundamentos de Diseño</span> <span>85%</span></div>
+                <div class="linea-progreso"><div class="fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="curso">
+                <div class="curso-info"><span>CSS Avanzado</span> <span>30%</span></div>
+                <div class="linea-progreso"><div class="fill" style="width: 30%;"></div></div>
+            </div>
+            <div class="curso">
+                <div class="curso-info"><span>Lógica de Programación</span> <span>12%</span></div>
+                <div class="linea-progreso"><div class="fill" style="width: 12%;"></div></div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
