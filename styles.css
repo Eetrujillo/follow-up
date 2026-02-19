@@ -1,4 +1,3 @@
-/* Variables inspiradas en Notion */
 :root {
     --bg: #ffffff;
     --sidebar-bg: #f7f7f5;
@@ -23,7 +22,7 @@ body {
     height: 100vh;
 }
 
-/* Sidebar - El Mapa */
+/* El Mapa */
 .sidebar {
     width: 240px;
     background-color: var(--sidebar-bg);
@@ -103,7 +102,7 @@ nav a:hover, nav a.active {
 
 .pulso span { position: relative; font-size: 1.4rem; font-weight: 700; }
 
-/* La Racha - Barras Semanales */
+/*Barras Semanales */
 .bar-group {
     display: flex;
     align-items: flex-end;
@@ -118,7 +117,7 @@ nav a:hover, nav a.active {
     min-height: 5px;
 }
 
-/* Los Tramos - Cursos Activos */
+/* Los Tramos */
 .tramos { grid-column: span 2; }
 .curso { margin-bottom: 20px; }
 .curso-info { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.9rem; }
