@@ -1,1 +1,65 @@
-<p>signup works!</p>
+<div class="main-container">
+  <div class="form-card">
+    <div class="logo-section">
+      <div class="bolt-icon">⚡</div>
+      <h1>Follow-up</h1>
+      <p>Crea tu cuenta para comenzar</p>
+    </div>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      
+      <div class="input-group">
+        <label>Nombre completo</label>
+        <div class="input-wrapper">
+          <input type="text" formControlName="fullName" placeholder="Juan Perez">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Nombre de usuario</label>
+        <div class="input-wrapper">
+          <span class="icon">@</span>
+          <input type="text" formControlName="username" placeholder="juanperez">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Correo electronico</label>
+        <div class="input-wrapper">
+          <input type="email" formControlName="email" placeholder="usuario@followup.com">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Contraseña</label>
+        <div class="input-wrapper">
+          <input type="password" formControlName="password" placeholder="Min. 8 caracteres">
+          <span class="eye-icon">👁️</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Confirmar contraseña</label>
+        <div class="input-wrapper">
+          <input type="password" formControlName="confirmPassword" placeholder="Repite tu contraseña">
+          <span class="eye-icon">👁️</span>
+        </div>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" formControlName="terms" id="terms">
+        <label for="terms">
+          Acepto los <a href="#">terminos y condiciones</a> y la <a href="#">politica de privacidad</a>
+        </label>
+      </div>
+
+      <button type="submit" class="btn-primary" [disabled]="signupForm.invalid">
+        Crear cuenta
+      </button>
+    </form>
+
+    <div class="footer-link">
+      Ya tienes cuenta? <a href="#">Inicia sesion</a>
+    </div>
+  </div>
+</div>
