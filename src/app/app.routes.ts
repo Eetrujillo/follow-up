@@ -7,6 +7,7 @@ import { Statistics } from './statistics/statistics';
 import { Notepad } from './notepad/notepad';
 
 export const routes: Routes = [
+  { path: '',redirectTo: 'login', pathMatch:'full'},
   { path: 'login', component: Login },
   { path: 'signup', component: Signup },
   { path: 'dashboard', component: Dashboard },
