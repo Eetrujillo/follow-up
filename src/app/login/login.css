@@ -11,8 +11,8 @@
 }
 
 .login-container {
-  width: 95%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 800px;
   text-align: center;
   font-family: sans-serif;
   color: white;
@@ -105,6 +105,5 @@ button {
   color: #1d8cf8;
 }
 .campo label {
-  font-size: 70px;
-  font-weight: bold;
+  font: size 60px;
 }

@@ -14,14 +14,17 @@
       <div class="campo">
         <label>contraseña</label>
         <div class="password-wrapper">
-          <input type="password" placeholder="12345678">
-          <span class="ojo">👁️</span>
+          <input [type]="verPassword ? 'text' : 'password'" placeholder="12345678">
+          
+          <span class="ojo" (click)="toggleOjo()">
+            {{ verPassword ? '👁️‍🗨️' : '👁️' }}
+          </span>
         </div>
       </div>
 
       <button type="submit">Iniciar sesion</button>
     </form>
 
-    <p class="pie">No tienes cuenta? <span (click)="goToSignup()" >Registrate</span></p>
+    <p class="pie">No tienes cuenta? <span>Registrate</span></p>
   </div>
 </div>

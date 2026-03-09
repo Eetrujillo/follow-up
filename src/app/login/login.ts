@@ -1,18 +1,24 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';   
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink],
   standalone: true,
+  imports: [], 
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })
 export class Login {
+  verPassword: boolean = false;
+
   constructor(private router: Router) { }
+
+  toggleOjo() {
+    this.verPassword = !this.verPassword;
+  }
+
   goToSignup() {
-    console.log("kwjnvkjen")
-    this.router.navigate(['/signup'])
+    console.log("Navegando a signup...");
+    this.router.navigate(['/signup']);
   }
 }
-
